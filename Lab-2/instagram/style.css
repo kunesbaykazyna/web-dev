@@ -1,0 +1,123 @@
+#first{
+           text-align: center;
+            font-family:'Times New Roman', Times, serif;
+            font-size:36px;
+            margin-left:-600px;
+            margin-top:-120px;
+            line-height:62px;
+
+        }
+        #second{
+            margin:40px;
+        }
+        span{
+            background-image: linear-gradient(
+                to right,#F27916,#E6179A
+            );
+            background-clip:text;
+            color: transparent;
+        }
+        #third{
+            margin-left:110px;
+            margin-top:-43px;
+        }
+        #tort{
+            margin-top:-560px;
+            margin-left:670px;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .login-box{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width:550px;
+            margin-left:670px;
+        }
+        .login-box input{
+            border-radius: 18px;
+            height:60px;
+            border-color:white;
+            border: 1px solid #ccc;
+            padding: 12px; 
+            width: 100%; 
+            box-sizing: border-box; 
+            font-size:18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .login-btn{
+            color:whitesmoke;
+            background-color: rgb(153,193,243);
+            border-radius:24px;
+            border-color:white;
+            height:45px;
+            font-size:16px;
+        }
+        #fp{
+            color:black;
+            text-align: center;
+            padding-top:10px;
+            border-radius:18px;
+            height: 35px;
+        }
+        #fp:hover{
+            background-color: rgb(241, 237, 237);
+        }
+        #facebook{
+            border-radius:28px;
+            height:45px;
+            font-size:16px;
+            margin-top:45px;
+            border-color:aliceblue;
+            border: 2px;
+            border: 1px solid #ccc;
+            background-color: white;
+            position: relative;
+        }
+
+        #facebook i{
+            color:#1877f2;
+            font-size:18px;
+            position: absolute;
+            left:170px;
+            top:50%;
+            transform:translateY(-50%);
+        }
+        #facebook:hover{
+            background-color: rgb(241, 237, 237);
+        }
+
+        #create-btn{
+            color:blue;
+            border-radius:28px;
+            height:45px;
+            font-size:16px;
+            border-color:blue;
+            border: 2px;
+            border: 1px solid blue;
+            background-color: white;
+        }
+        #create-btn:hover{
+            background-color: rgb(241, 237, 237);
+        }
+        #meta{
+            margin-top:20px;
+            margin-left:900px;
+        }
+        .footer {
+    border-top: 1px solid lightgray;
+    padding: 20px;
+    color: gray;
+    text-decoration: None;
+    font-size: 12px;
+    text-align: center;
+}
+.footer a{
+    color: gray;
+    text-decoration: None;
+    margin: 8px;
+    font-size: 12px;
+}
+.footer-links {
+    margin: 10px;
+}
