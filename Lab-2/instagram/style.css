@@ -104,20 +104,3 @@
             margin-top:20px;
             margin-left:900px;
         }
-        .footer {
-    border-top: 1px solid lightgray;
-    padding: 20px;
-    color: gray;
-    text-decoration: None;
-    font-size: 12px;
-    text-align: center;
-}
-.footer a{
-    color: gray;
-    text-decoration: None;
-    margin: 8px;
-    font-size: 12px;
-}
-.footer-links {
-    margin: 10px;
-}
