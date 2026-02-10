@@ -1,0 +1,16 @@
+<DOSTYPE! html> <html> <body> <script>
+  let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}
+function sumofsalary(obj){
+ let res=0;
+    for(let key in obj){
+         res+= obj[key];
+    }
+    return res;
+}
+let result=sumofsalary(salaries);
+alert(res);
+</script> </body> </html> 
