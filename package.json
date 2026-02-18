@@ -1,7 +1,0 @@
-{
-  "devDependencies": {
-    "@types/jasmine": "^6.0.0",
-    "@types/jest": "^30.0.0",
-    "vitest": "^4.0.18"
-  }
-}
