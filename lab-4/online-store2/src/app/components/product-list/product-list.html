@@ -1,0 +1,33 @@
+<h1>Online store</h1>
+<hr class="head">
+<div class="grid">
+    <div class="card" *ngFor="let product of products">
+
+        <div class="img-w">
+            <img [src]="getMainImage(product)" [alt]="product.name" />
+        </div>
+
+        <div class="thumbs">
+            <img *ngFor="let img of product.images" [src]="img" class="thumb" (click)="selectImage(product.id, img)"
+                [class.active]="getMainImage(product) === img" />
+        </div>
+        <hr>
+        <div class="sent">
+            <h3>{{ product.name }}</h3>
+
+            <p class="desc">{{ product.description }}</p>
+
+            <p class="cost">{{ product.price }} ₸</p>
+            <p class="rate"><span class="rating">{{ product.rating }}</span><i class="fa-solid fa-star" style="color: rgba(255, 212, 59, 1);" *ngFor="let star of amountStar(product.rating)"> </i></p>
+            <button><a [href]="product.link" target="_blank" rel="noopener">
+                    Open on Kaspi
+                </a></button>
+            <p class="share">Поделиться: </p>
+        </div>
+
+        <div class="links">
+            <button class="wh" type="button" (click)="shareWhatsapp(product)">WhatsApp</button>
+            <button class="tg" type="button" (click)="shareTelegram(product)">Telegram</button>
+        </div>
+    </div>
+</div>
