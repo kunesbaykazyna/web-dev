@@ -1,0 +1,29 @@
+<div class="card">
+
+    <div class="likes">
+        <button class="like" (click)="like()">{{product.likes}} ❤️</button>
+    </div>
+    <div class="img-w">
+        <img class="img" [src]="getMainImage()" />
+    </div>
+
+    <div class="thumbs">
+        <img *ngFor="let img of product.images" [src]="img" (click)="selectImage(img)"
+            [class.active]="getMainImage() === img" />
+    </div>
+
+    <div class="text">
+        <h3>{{product.name}}</h3>
+        <h4>{{product.price}} ₸</h4>
+        <p>{{product.description}}</p>
+    </div>
+    <div class="d"> <button class="kaspi"><a [href]="product.link" target="_blank">Open in Kaspi</a></button>
+        <button class="delete" (click)="deleteProduct()"><i class="fas fa-trash"></i></button>
+    </div>
+
+    <p class="share">Share:</p>
+    <div class="links">
+        <button class="wh" type="button" (click)="shareWhatsapp()">WhatsApp</button>
+        <button class="tg" type="button" (click)="shareTelegram()">Telegram</button>
+    </div>
+</div>
