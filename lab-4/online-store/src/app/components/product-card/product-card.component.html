@@ -1,0 +1,49 @@
+<div class="product-card">
+  <!-- Gallery Section -->
+  <div class="gallery">
+    <div class="main-image">
+      <button class="nav-btn prev" (click)="prevImage()" [disabled]="selectedImageIndex === 0">❮</button>
+      <img [src]="selectedImage" [alt]="product.name" />
+      <button class="nav-btn next" (click)="nextImage()" [disabled]="selectedImageIndex === product.images.length - 1">❯</button>
+    </div>
+    <div class="thumbnails">
+      <img
+        *ngFor="let img of product.images; let i = index"
+        [src]="img"
+        [alt]="'Thumbnail ' + i"
+        (click)="selectImage(i)"
+        [class.active]="selectedImageIndex === i"
+      />
+    </div>
+  </div>
+
+  <!-- Product Info -->
+  <div class="product-info">
+    <h3>{{ product.name }}</h3>
+    <p class="description">{{ product.description }}</p>
+    <div class="price-rating">
+      <span class="price">{{ product.price | number }} ₸</span>
+      <div class="rating">
+        <span *ngFor="let star of getStarsArray(product.rating)" class="star">
+          <i *ngIf="star === 1" class="fas fa-star"></i>
+          <i *ngIf="star === 0.5" class="fas fa-star-half-alt"></i>
+          <i *ngIf="star === 0" class="far fa-star"></i>
+        </span>
+        <span class="rating-value">{{ product.rating }}</span>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="actions">
+      <a [href]="product.link" target="_blank" class="btn btn-primary">View on Kaspi</a>
+      <div class="share-buttons">
+        <button class="btn-share whatsapp" (click)="shareOnWhatsApp()" title="Share on WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </button>
+        <button class="btn-share telegram" (click)="shareOnTelegram()" title="Share on Telegram">
+          <i class="fab fa-telegram-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
