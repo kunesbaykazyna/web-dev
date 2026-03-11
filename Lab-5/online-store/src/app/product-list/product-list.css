@@ -1,0 +1,13 @@
+.main {
+    display: grid;
+    grid-template-columns: repeat(3, 420px);
+    gap: 22px;
+    justify-content: center;
+    padding: 30px;
+}
+
+p{
+    color:rgb(5, 61, 5);
+    font-size: 50px;
+    text-align: center;
+}
