@@ -1,0 +1,15 @@
+<h2>Albums</h2>
+
+<input [(ngModel)]="newTitle" placeholder="New album title">
+<button (click)="create()">Add</button>
+
+<div *ngIf="loading">Loading...</div>
+
+<ul *ngIf="!loading">
+  <li *ngFor="let album of albums">
+    <a [routerLink]="['/albums', album.id]">
+      {{ album.id }} - {{ album.title }}
+    </a>
+    <button (click)="delete(album.id)">Delete</button>
+  </li>
+</ul>

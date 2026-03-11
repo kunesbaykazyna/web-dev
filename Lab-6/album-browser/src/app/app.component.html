@@ -1,0 +1,11 @@
+<input [(ngModel)]="newTitle" placeholder="New album title">
+<button (click)="create()">Add</button>
+<nav>
+  <a routerLink="/home">Home</a>
+  <a routerLink="/about">About</a>
+  <a routerLink="/albums">Albums</a>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
